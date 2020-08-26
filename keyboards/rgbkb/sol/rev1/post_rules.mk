@@ -17,3 +17,14 @@ endif
 ifeq ($(strip $(LED_MIRRORED)), yes)
     OPT_DEFS += -DLED_MIRRORED
 endif
+
+
+ifeq ($(strip $(OLED_DRIVER_ENABLE)), yes)
+    ifeq ($(strip $(ENCODER_ENABLE)), yes)
+        ifneq ($(strip $(RGB_MATRIX_ENABLE)), no)
+            ifneq ($(strip $(RGB_OLED_MENU)), no)
+                OPT_DEFS += -DRGB_OLED_MENU=$(strip $(RGB_OLED_MENU))
+            endif
+        endif
+    endif
+endif
