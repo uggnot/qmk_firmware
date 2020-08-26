@@ -1,4 +1,4 @@
-# The Default Sol Layout
+# UggNot's Sol Layout
 ## Layout
 
 ### Qwerty Base Layer
